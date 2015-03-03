@@ -1,0 +1,143 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+//welcome page
+  //navbar
+.navbar-wrapper .container {
+  margin: none;
+  padding-right: 0px;
+  padding-left: 0px;
+  width: 100%;
+  position: fixed;
+  // background-color: rgba(254, 232, 153, 0.83);
+  // background-color: rgb(137, 204, 204);
+  opacity: 0.80;
+  z-index: 1000;
+}
+
+.navbar-wrapper .navbar {
+  margin-bottom: 0px;
+}
+
+.navbar-header .navbar-brand {
+  padding-left: 25px;
+  font-size: 24px;
+}
+#navbar {
+  float: right;
+}
+
+#navbar li {
+  float: right;
+  font-size: 24px;
+}
+
+//carousel
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.carousel-indicators {
+}
+  //jumbotron
+.jumbotron {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+  background-image: image-url('cool-heart-picture.jpg');
+  background-repeat: no-repeat;
+  background-position: 100%;
+  height: 600px;
+  width: 100%;
+  opacity: 50%;
+}
+  //jumbotron-text
+.jumbotron .jumbotron-text h1 {
+  float: left;
+  margin-top: 150px;
+  font-size: 120px;
+  opacity: 1.0;
+  font-family: Geneva;
+}
+
+.jumbotron .jumbotron-text p {
+  font-size: 63px;
+  float: right;
+  font-family: Geneva;
+}
+
+.jumbotron .btn-default {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-right: 175px;
+  font-size: 36px;
+  float: right;
+  background-color: #333;
+  opacity: 0.8;
+  color: white;
+}
+
+//container-marketing
+.container-text {
+  // background-color: rgba(137, 204, 204, 0.5);
+  height: 70px;
+}
+
+.container-text h1 {
+  font-size: 60px;
+  text-align: left;
+}
+
+.container-text p {
+  font-family: Fantasy;
+  font-size: 48px;
+  text-align: left;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.container-featured .col-lg-4 {
+  padding: 0px;
+}
+
+.container-featured .first-date {
+  height: 400px;
+  width: 100%;
+  padding: 0px;
+}
+
+.container-featured .fun-date {
+  height: 400px;
+  width: 100%;
+  padding: 0px;
+}
+
+.container-featured .romantic-date {
+  height: 400px;
+  width: 100%;
+}
+
+//container-marketing-maybe?
+.container-marketing .first-date {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container-marketing .fun-date {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container-marketing .romantic-date {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+.container-marketing .btn-default {
+  background-color: #ccc;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DateNight</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <%= csrf_meta_tags %>
+  <meta charset=utf-8 />
+</head>
+<body>
+
+  <%= render partial: "header" %>
+
+  <div class="row container">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}", class: "alert-danger col-md-12 text-center muted", role: "alert" %>
+    <% end %>
+  </div>
+
+  <%= yield %>
+
+  <%= javascript_include_tag 'application' %>
+
+</body>
+</html>
