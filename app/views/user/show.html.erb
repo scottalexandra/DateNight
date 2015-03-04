@@ -1,0 +1,33 @@
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=La+Belle+Aurore" />
+<div class="show-page-container">
+  <div class="user-profile-heading">
+    <h1><%= @user.name%> > My Profile</h1>
+  </div>
+  <div class="container profile-info">
+    <div class="panel panel-default upcoming-dates">
+      <div class="panel-heading">Upcoming Dates</div>
+      <div class="panel-body">
+        No Upcoming Dates
+      </div>
+    </div>
+    <div class="panel panel-default past-dates">
+      <div class="panel-heading">Past Dates</div>
+      <div class="panel-body">
+        No Past Dates
+      </div>
+    </div>
+    <div class="panel panel-default account-details">
+      <div class="panel-heading">Account Details</div>
+      <div class="panel-body">
+        <div class="name">
+          name: <%= @user.name %>
+          <%= link_to "edit", edit_user_path(@user.id), class: "edit" %>
+        </div><br>
+        <div class="email">
+          email: <%= @user.email %>
+          <%= link_to "edit", edit_user_path(@user.id), class: "edit" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

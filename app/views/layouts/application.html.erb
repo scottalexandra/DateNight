@@ -11,9 +11,9 @@
 
   <%= render partial: "header" %>
 
-  <div class="row container">
+  <div class="row container flash-messages">
     <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, :id => "flash_#{name}", class: "alert-danger col-md-12 text-center muted", role: "alert" %>
+      <%= content_tag :div, msg, :id => "flash_#{name}", class: "alert-danger text-center muted", role: "alert" %>
     <% end %>
   </div>
 

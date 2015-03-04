@@ -3,12 +3,16 @@ class SessionsController < ApplicationController
     user = User.find_or_create_from_auth(auth)
     if user
       session[:user_id] = user.id
-      flash[:notice] = "Successfully Logged In"
       redirect_to user_path(user.id)
     else
       flash[:error] = "Invalid Login"
       redirect_to root_path
     end
+  end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_path
   end
 
   private
