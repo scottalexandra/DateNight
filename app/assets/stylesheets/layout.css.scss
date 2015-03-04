@@ -29,7 +29,7 @@
     font-size: 150px;
     text-align: left;
     font-family: 'La Belle Aurore';
-    color: white;
+    color: purple;
   }
 
   .site-wrapper .btn .btn-default {
@@ -60,12 +60,16 @@
 
 #navbar {
   float: right;
-  font-family: "Just Me Again Down Here";
+  font-family: "Just Another Hand";
+  color: purple;
 }
 
 #navbar li {
   float: right;
   font-size: 36px;
+}
+
+.navbar-collapse .collapse ul li {
 }
 
 
