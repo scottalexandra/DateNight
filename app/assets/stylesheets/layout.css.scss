@@ -2,6 +2,7 @@
 @import "bootstrap";
 
 //welcome page
+
   //site wrapper
   .site-container {
     background-color: black;
@@ -9,7 +10,13 @@
   }
 
   .site-wrapper {
+    background-image: image-url('night-city-scape.jpg');
+    background-repeat: no-repeat;
     margin-top: 50px;
+    width: 100%;
+    height: 1000px;
+    background-size: 100%;
+    opacity: 1.0;
   }
 
   .site-wrapper .container {
@@ -18,7 +25,7 @@
 
   .site-wrapper h1 {
     font-size: 200px;
-    text-align: center;
+    text-align: left;
     font-family: 'La Belle Aurore';
     color: white;
   }
@@ -26,13 +33,6 @@
   .site-wrapper .btn .btn-default {
     float: right;
   }
-
-  .wrapper-pic {
-    padding-top: 80px;
-    padding-bottom: 50px;
-    width: 100%
-  }
-
 
 
   //navbar
@@ -69,12 +69,20 @@
 
 //user show page
 .show-page-container {
-  background-color: black;
-  height: 900px;
+  background-color: gray;
+  width: 100%;
+  height: 1000px
+
+}
+
+.pic {
+  background-size: 100%;
+  width: 100%;
+  height: 300px;
 }
 
 .profile-info {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .profile-info .panel-heading {
@@ -87,13 +95,12 @@
 }
 
 .user-profile-heading {
-  font-family: 'La Belle Aurore';
   margin-top: 50px;
+  font-family: 'La Belle Aurore';
 }
 
 .user-profile-heading h1 {
-  padding-top: 15px;
-  background-color: black;
+  padding-top: 10px;
   color: white;
 }
 
