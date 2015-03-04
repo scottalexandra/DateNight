@@ -13,11 +13,12 @@
   }
 
   .site-wrapper .container {
-    padding-top: 150px;
+    padding-top: 80px;
   }
 
   .site-wrapper h1 {
     font-size: 250px;
+    // font-family: "Just Me Again Down Here";
     font-family: 'La Belle Aurore';
     color: white;
   }
@@ -51,15 +52,18 @@
 
 .navbar-header .navbar-brand {
   padding-left: 25px;
-  font-size: 24px;
+  font-size: 36px;
+  font-family: "Just Me Again Down Here";
 }
+
 #navbar {
   float: right;
+  font-family: "Just Me Again Down Here";
 }
 
 #navbar li {
   float: right;
-  font-size: 24px;
+  font-size: 36px;
 }
 
 
@@ -74,6 +78,7 @@
 }
 
 .profile-info .panel-heading {
+  font-family: 'La Belle Aurore';
   font-size: 36px;
 }
 
@@ -82,7 +87,14 @@
 }
 
 .user-profile-heading {
+  font-family: 'La Belle Aurore';
   margin-top: 50px;
+}
+
+.user-profile-heading h1 {
+  padding-top: 15px;
+  background-color: black;
+  color: white;
 }
 
 .user-profile .account-details .edit {
