@@ -43,7 +43,7 @@
 //welcome page
 
 .welcome-container {
-  background: url('night-city-scape.jpg') no-repeat center center fixed;
+  background: url('fuzzy.jpg') no-repeat center center fixed;
   // background-color: black;
   background-size: 100%;
   height: 1000px;
@@ -55,7 +55,7 @@
 .welcome-container h1 {
   font-family: 'La Belle Aurore';
   font-size: 120px;
-  color: purple;
+  color: white;
   margin-left: 100px;
   padding-top: 100px;
 }
@@ -63,7 +63,7 @@
 .welcome-container .btn-link {
   font-family: 'La Belle Aurore';
   // font-family: "Helvetica Neue";
-  color: purple;
+  color: white;
   // opacity: 0;
   // background-color: darkgrey;
   margin-left: 600px;
@@ -84,7 +84,7 @@
   }
 
   .site-wrapper {
-    background: url('night-city-scape.jpg') no-repeat center center fixed;
+    background: url('fuzzy.jpg') no-repeat center center fixed;
     // background-repeat: no-repeat;
     // margin-top: 50px;
     background-size: 100%;
@@ -101,7 +101,7 @@
     font-size: 100px;
     text-align: left;
     font-family: 'La Belle Aurore';
-    color: purple;
+    color: white;
   }
 
   .site-wrapper .btn .btn-default {
@@ -116,7 +116,7 @@
   padding-left: 0px;
   width: 100%;
   position: fixed;
-  opacity: 0.9;
+  opacity: 0.7;
   z-index: 1000;
 }
 
@@ -149,7 +149,7 @@
 //user show page
 
 body {
-  background: url('night-city-scape.jpg') no-repeat center center fixed;
+  background: url('fuzzy.jpg') no-repeat center center fixed;
   background-size: 100%;
 }
 
@@ -168,7 +168,7 @@ body {
   font-family: 'La Belle Aurore';
   padding-top: 10px;
   margin-top: 50px;
-  color: black;
+  color: white;
 }
 
 .profile-info .account-details .edit {
