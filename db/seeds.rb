@@ -11,7 +11,6 @@ class Seed
   end
 
   def build_events
-    i = 1
     10.times do
       Event.create(title: Faker::Company.catch_phrase,
                    url: Faker::Internet.url,
@@ -22,10 +21,8 @@ class Seed
                    city: Faker::Address.city,
                    state: Faker::Address.state,
                    postal_code: Faker::Address.zip,
-                   country: Faker::Address.country,
-                   image_id: i
+                   country: Faker::Address.country
                    )
-      i = i + 1
     end
   end
 end
