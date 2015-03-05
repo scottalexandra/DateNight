@@ -5,10 +5,8 @@ class Seed
   end
 
   def build_images
-    i = 1
     10.times do
-      Image.create(url: "event-image.jpg", caption: "This is the event of the season!", event_id: i)
-      i = i + 1
+      Image.create(url: "event-image.jpg", caption: "This is the event of the season!")
     end
   end
 
