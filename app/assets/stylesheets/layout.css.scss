@@ -1,32 +1,104 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+
+//events
+  // .container-container {
+  //   background-color: gray;
+  //   background-size: 100%;
+  // }
+  .panel {
+    opacity: 0.7;
+  }
+
+  .events-list {
+    margin-top: 30px;
+    background-size: 100%;
+  }
+
+  .event-info {
+    padding-bottom: 20px;
+  }
+  .event-image {
+    padding-top: 10px;
+    width: 150px;
+    height: 150px;
+    float: right;
+    padding-bottom: 10px;
+  }
+
+  .events-list .event-title {
+    padding: 15px;
+    float: left;
+  }
+
+  .event-image .event-description {
+    padding: 15px;
+    float: left;
+  }
+  .event-time {
+    float: left;
+  }
 //welcome page
+
+.welcome-container {
+  background: url('night-city-scape.jpg') no-repeat center center fixed;
+  // background-color: black;
+  background-size: 100%;
+  height: 1000px;
+  margin-top: 50px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.welcome-container h1 {
+  font-family: 'La Belle Aurore';
+  font-size: 120px;
+  color: purple;
+  margin-left: 100px;
+  padding-top: 100px;
+}
+
+.welcome-container .btn-link {
+  font-family: 'La Belle Aurore';
+  // font-family: "Helvetica Neue";
+  color: purple;
+  // opacity: 0;
+  // background-color: darkgrey;
+  margin-left: 600px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  // border-color: purple;
+  font-size: 40px;
+
+}
+//events page welcome page
 
   //site wrapper
   .site-container {
-    background-color: black;
-    background-size: 100%;
-    width: 100%;
-    height: 1000px;
+    // width: 100%;
+    // height: 1000px;
   }
 
   .site-wrapper {
-    background-image: image-url('night-city-scape.jpg');
-    background-repeat: no-repeat;
-    margin-top: 50px;
-    width: 100%;
+    background: url('night-city-scape.jpg') no-repeat center center fixed;
+    // background-repeat: no-repeat;
+    // margin-top: 50px;
     background-size: 100%;
-    opacity: 1.0;
+    // opacity: 1.0;
   }
 
-  .site-wrapper .container {
-    padding-top: 80px;
+  .site-wrapper {
+    padding-top: 70px;
 
   }
 
   .site-wrapper h1 {
-    font-size: 150px;
+    padding-bottom: 30px;
+    font-size: 100px;
     text-align: left;
     font-family: 'La Belle Aurore';
     color: purple;
@@ -44,7 +116,7 @@
   padding-left: 0px;
   width: 100%;
   position: fixed;
-  opacity: 0.80;
+  opacity: 0.9;
   z-index: 1000;
 }
 
@@ -54,19 +126,20 @@
 
 .navbar-header .navbar-brand {
   padding-left: 25px;
-  font-size: 36px;
+  font-size: 20px;
   font-family: "Just Me Again Down Here";
 }
 
 #navbar {
   float: right;
-  font-family: "Just Another Hand";
+  font-family: "Helvetica Neue";
+  // font-family: "Just Another Hand";
   color: purple;
 }
 
 #navbar li {
   float: right;
-  font-size: 36px;
+  font-size: 20px;
 }
 
 .navbar-collapse .collapse ul li {
@@ -74,42 +147,30 @@
 
 
 //user show page
-.show-page-container {
-  background-color: gray;
-  width: 100%;
-  height: 1000px
 
-}
-
-.pic {
+body {
+  background: url('night-city-scape.jpg') no-repeat center center fixed;
   background-size: 100%;
-  width: 100%;
-  height: 300px;
 }
 
-.profile-info {
-  margin-top: 50px;
-}
 
 .profile-info .panel-heading {
-  font-family: 'La Belle Aurore';
-  font-size: 36px;
+  font-family: "Helvetica Neue";
+  font-size: 25px;
 }
 
 .profile-info .panel-body {
   font-size: 20px;
 }
 
-.user-profile-heading {
-  margin-top: 50px;
+
+.container h1 {
   font-family: 'La Belle Aurore';
-}
-
-.user-profile-heading h1 {
   padding-top: 10px;
-  color: white;
+  margin-top: 50px;
+  color: black;
 }
 
-.user-profile .account-details .edit {
+.profile-info .account-details .edit {
   float: right;
 }

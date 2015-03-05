@@ -13,7 +13,7 @@ describe "authenticated user" do
   scenario "can login and visit the events index page" do
     visit events_path
     within(".events-list") do
-      expect(page).to have_content("Explore Denver Events")
+      expect(page).to have_content("Explore All The Happenings")
     end
   end
 end
