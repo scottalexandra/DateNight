@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   get 'login', to: 'sessions#create'
   get 'logout', to: 'sessions#destroy'
-  root 'events#index'
+  root 'welcome#index'
   resources :users, only: [:create, :show, :edit, :update]
   resources :events, only: [:index, :show]
 

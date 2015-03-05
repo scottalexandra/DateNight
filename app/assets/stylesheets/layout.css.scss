@@ -4,14 +4,17 @@
 
 
 //events
-  .container-container {
-    font-family: "Helvetica Neue";
-    background-color: gray;
-    background-size: 100%;
+  // .container-container {
+  //   background-color: gray;
+  //   background-size: 100%;
+  // }
+  .panel {
+    opacity: 0.7;
   }
 
   .events-list {
     margin-top: 30px;
+    background-size: 100%;
   }
 
   .event-info {
@@ -39,18 +42,53 @@
   }
 //welcome page
 
+.welcome-container {
+  background: url('night-city-scape.jpg') no-repeat center center fixed;
+  // background-color: black;
+  background-size: 100%;
+  height: 1000px;
+  margin-top: 50px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.welcome-container h1 {
+  font-family: 'La Belle Aurore';
+  font-size: 120px;
+  color: purple;
+  margin-left: 100px;
+  padding-top: 100px;
+}
+
+.welcome-container .btn-link {
+  font-family: 'La Belle Aurore';
+  // font-family: "Helvetica Neue";
+  color: purple;
+  // opacity: 0;
+  // background-color: darkgrey;
+  margin-left: 600px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  // border-color: purple;
+  font-size: 40px;
+
+}
+//events page welcome page
+
   //site wrapper
   .site-container {
-    width: 100%;
-    height: 350px;
+    // width: 100%;
+    // height: 1000px;
   }
 
   .site-wrapper {
-    background-image: image-url('night-city-scape.jpg');
-    background-repeat: no-repeat;
-    margin-top: 50px;
+    background: url('night-city-scape.jpg') no-repeat center center fixed;
+    // background-repeat: no-repeat;
+    // margin-top: 50px;
     background-size: 100%;
-    opacity: 1.0;
+    // opacity: 1.0;
   }
 
   .site-wrapper {
@@ -78,7 +116,7 @@
   padding-left: 0px;
   width: 100%;
   position: fixed;
-  // opacity: 1.0;
+  opacity: 0.9;
   z-index: 1000;
 }
 
