@@ -11,22 +11,22 @@
         <h3>Explore All The Happenings...</h3>
         <% @events.each do |event| %>
           <div class="event-info container">
-            <div class="event-image col-md-4">
+            <div class="event-image col-md-12">
               <%= image_tag("event-image.jpg", class: "event-image") %>
             </div>
-            <div class="event-title col-md-8">
+            <div class="event-title col-md-12">
               <%= link_to "#{event.title}", event.url %>
             </div><br>
-            <div class="event-description col-md-8">
+            <div class="event-description col-md-12">
               <%= event.description %>
             </div>
-            <div class="event-address col-md-8">
+            <div class="event-address col-md-12">
               <%= event.address %>
             </div>
-            <div class="event-city-state col-md-8">
+            <div class="event-city-state col-md-12">
               <%= event.city %> , <%= event.state %>  <%= event.postal_code %>
             </div>
-            <div class="event-time col-md-8">
+            <div class="event-time col-md-12">
               <%= event.time %>
             </div>
           </div>

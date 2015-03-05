@@ -10,6 +10,8 @@
   // }
   .panel {
     opacity: 0.7;
+    width: 75%;
+    margin: auto;
   }
 
   .events-list {
@@ -24,26 +26,39 @@
     padding-top: 10px;
     width: 150px;
     height: 150px;
-    float: right;
+    // margin-left: 20px;
+    // float: right;
     padding-bottom: 10px;
+    // text-align: left;
   }
 
   .events-list .event-title {
     padding: 15px;
-    float: left;
+    text-align: left;
+    // float: left;
   }
 
-  .event-image .event-description {
+  .event-description {
     padding: 15px;
-    float: left;
+    text-align: left;
+    // float: left;
+  }
+
+  .event-address {
+    text-align: left;
+  }
+
+  .event-city-state {
+    text-align: left;
   }
   .event-time {
-    float: left;
+    text-align: left;
+    // float: left;
   }
 //welcome page
 
 .welcome-container {
-  background: url('fuzzy.jpg') no-repeat center center fixed;
+  background: url('fuzzy.jpg') center center fixed;
   // background-color: black;
   background-size: 100%;
   height: 1000px;
@@ -56,6 +71,7 @@
   font-family: 'La Belle Aurore';
   font-size: 120px;
   color: white;
+  float: left;
   margin-left: 100px;
   padding-top: 100px;
 }
@@ -66,7 +82,9 @@
   color: white;
   // opacity: 0;
   // background-color: darkgrey;
-  margin-left: 600px;
+  // margin-left: 600px;
+  margin-top: 200px;
+  float: left;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-right: 10px;
@@ -84,7 +102,7 @@
   }
 
   .site-wrapper {
-    background: url('fuzzy.jpg') no-repeat center center fixed;
+    background: url('fuzzy.jpg') center center fixed;
     // background-repeat: no-repeat;
     // margin-top: 50px;
     background-size: 100%;
@@ -127,7 +145,6 @@
 .navbar-header .navbar-brand {
   padding-left: 25px;
   font-size: 20px;
-  font-family: "Just Me Again Down Here";
 }
 
 #navbar {
@@ -167,7 +184,8 @@ body {
 .container h1 {
   font-family: 'La Belle Aurore';
   padding-top: 10px;
-  margin-top: 50px;
+  margin-top: 60px;
+  padding-bottom: 10px;
   color: white;
 }
 
