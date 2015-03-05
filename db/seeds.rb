@@ -1,9 +1,19 @@
 class Seed
-
   def initialize
+    build_images
     build_events
   end
+
+  def build_images
+    i = 1
+    10.times do
+      Image.create(url: "event-image.jpg", caption: "This is the event of the season!", event_id: i)
+      i = i + 1
+    end
+  end
+
   def build_events
+    i = 1
     10.times do
       Event.create(title: Faker::Company.catch_phrase,
                    url: Faker::Internet.url,
@@ -15,8 +25,9 @@ class Seed
                    state: Faker::Address.state,
                    postal_code: Faker::Address.zip,
                    country: Faker::Address.country,
-                   image: open("app/assets/images/event-image.jpg")
+                   image_id: i
                    )
+      i = i + 1
     end
   end
 end
