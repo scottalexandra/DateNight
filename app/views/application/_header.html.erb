@@ -37,6 +37,30 @@
             <% end %>
           </ul>
         </div>
+        <div id="current-location" class="col-md-4">
+          <!-- <%= search_field_tag 'search', 'Choose A Location' %> -->
+          <div class="location-button">
+            <button class="btn btn-link" onclick="getLocation()">Get Current Location:</button>
+          </div>
+            <span id="location"></span>
+          <script>
+            var x = document.getElementById("location");
+            function getLocation() {
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+              } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+              }
+            }
+
+            function showPosition(position) {
+              var latit = position.coords.latitude;
+              var longit = position.coords.longitude;
+              x.innerHTML = "Latitude: " + latit +
+              " Longitude: " + longit;
+            }
+          </script>
+        </div>
       </div>
     </div>
   </div>
