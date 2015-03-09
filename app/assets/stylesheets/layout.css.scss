@@ -160,13 +160,13 @@
 }
 
 #navbar li {
-  float: right;
+  float: left;
   font-size: 20px;
 }
 
-.navbar-collapse .collapse ul li {
+#navbar li .search {
+  font-size: 18px;
 }
-
 
 //user show page
 

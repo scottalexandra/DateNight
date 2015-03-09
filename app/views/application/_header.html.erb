@@ -15,6 +15,16 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li>
+              <div class="search">
+                <%= form_tag(events_path, :method => "get", class: "navbar-form", id: "search_form") do %>
+                    <%= text_field_tag :search, params[:search], class: "span2", placeholder: "Search By City" %>
+                    <button class="btn btn-link" type= "submit">
+                      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                <% end %>
+              </div>
+            </li>
+            <li>
               <a href="#">About</a>
             </li>
             <li>
@@ -40,7 +50,7 @@
         <div id="current-location" class="col-md-4">
           <!-- <%= search_field_tag 'search', 'Choose A Location' %> -->
           <div class="location-button">
-            <button class="btn btn-link" onclick="getLocation()">Get Current Location:</button>
+            <!-- <button class="btn btn-link" onclick="getLocation()">Get Current Location:</button> -->
           </div>
             <span id="location"></span>
           <script>
