@@ -4,35 +4,53 @@
     <div class="cover-container">
       <h1>Date Night</h1>
     </div>
-
-  <div class="events-list container">
-    <div class="panel panel-default upcoming-dates">
-      <div class="panel-body">
-        <h3>Explore All The Happenings...</h3>
-        <% @events.each do |event| %>
-          <div class="event-info container">
-            <div class="event-image col-md-4">
-              <%= image_tag("event-image.jpg", class: "event-image") %>
+    <div class="events-list container">
+      <div class="panel panel-default upcoming-dates">
+        <div class="panel-body">
+          <h3>Explore All The Happenings...</h3>
+          <% @events.each do |event| %>
+            <div class="event-info container">
+              <div class="event-image col-md-12">
+                <%= image_tag("event-image.jpg", class: "event-image") %>
+              </div>
+              <div class="event-title col-md-12">
+                <%= link_to "#{event.title}", event.url %>
+              </div><br>
+              <div class="event-description col-md-12">
+                <%= event.description %>
+              </div>
+              <div class="event-address col-md-12">
+                <%= event.address %>
+              </div>
+              <div class="event-city-state col-md-12">
+                <%= event.city %> , <%= event.state %>  <%= event.postal_code %>
+              </div>
+              <div class="event-time col-md-12">
+                <%= event.time %>
+              </div>
             </div>
-            <div class="event-title col-md-8">
-              <%= link_to "#{event.title}", event.url %>
-            </div><br>
-            <div class="event-description col-md-8">
-              <%= event.description %>
-            </div>
-            <div class="event-address col-md-8">
-              <%= event.address %>
-            </div>
-            <div class="event-city-state col-md-8">
-              <%= event.city %> , <%= event.state %>  <%= event.postal_code %>
-            </div>
-            <div class="event-time col-md-8">
-              <%= event.time %>
-            </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
 </div>
-</div>
+<script "javascript/text">
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map-canvas'}}, function(){
+    markers = handler.addMarkers([
+      {
+        "lat": 39.749,
+        "lng": -105.000,
+        "picture": {
+          "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+          "width":  36,
+          "height": 36
+        },
+        "infowindow": "hello!"
+      }
+    ]);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+</script>
