@@ -14,7 +14,7 @@
                 <%= image_tag("event-image.jpg", class: "event-image") %>
               </div>
               <div class="event-title col-md-12">
-                <%= link_to "#{event.title}", event.url %>
+                <%= link_to "#{event.title}", event_path(event.id) %>
               </div><br>
               <div class="event-description col-md-12">
                 <%= event.description %>

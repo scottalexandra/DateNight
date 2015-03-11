@@ -20,8 +20,4 @@ RSpec.describe Event, :type => :model do
   scenario "it belongs to many itineraries through itinerary events" do
     should have_many(:itineraries).through(:itinerary_events)
   end
-
-  scenario "it has one image" do
-    should have_one(:image)
-  end
 end
