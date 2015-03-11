@@ -13,7 +13,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'unicorn'
 gem 'pg'
 gem 'rails_12factor', group: :production
-gem 'bootstrap-sass'
+gem 'twitter-bootstrap-rails'
+# gem 'bootstrap-sass'
 gem "bootstrap_form"
 gem 'google-api-client'
 gem 'omniauth-google-oauth2'

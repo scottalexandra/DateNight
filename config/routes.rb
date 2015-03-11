@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
-  get 'event/index'
-
-  get 'event/show'
-
   get '/auth/:provider/callback', to: 'sessions#create'
   get 'login', to: 'sessions#create'
   get 'logout', to: 'sessions#destroy'
+  post "/planners", to: "planners#create"
+  delete "/planners", to: "planners#destroy"
   root 'welcome#index'
+  get 'about', to: 'welcome#about'
+  get 'contact', to: 'welcome#contact'
   get 'map', to: 'welcome#map'
   resources :users, only: [:create, :show, :edit, :update]
   resources :events, only: [:index, :show]
+  resources :itineraries, only: [:new, :create, :show, :index, :edit, :update]
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

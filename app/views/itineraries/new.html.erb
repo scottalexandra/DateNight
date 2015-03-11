@@ -1,0 +1,29 @@
+<h1>New Date Itinerary</h1>
+<div class="events-list container">
+  <div class="panel panel-default event-details">
+    <div class="panel-body">
+      <div class="itinerary-events-list">
+        <% @events.each do |event| %>
+          <div class="event-title col-md-12">
+            <%= link_to "#{event.title}", event.url %><
+          </div>
+          <div class="event-description col-md-12">
+            <%= event.description %>
+          </div>
+          <div class="event-time col-md-12">
+            <%= event.time %>
+          </div>
+          <div class="event-place col-md-12">
+            <%= event.place %>
+          </div>
+          <div class="event-address col-md-12">
+            <%= event.address %>
+          </div>
+          <div class="event-city-state-zip col-md-12">
+            <%= "#{event.city}, #{event.state} #{event.postal_code}" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

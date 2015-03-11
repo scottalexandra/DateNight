@@ -3,8 +3,13 @@ class Event < ActiveRecord::Base
   has_many :itinerary_events
   has_many :itineraries, through: :itinerary_events
 
+  attr_reader :quantity
 
   def self.search(query)
-    where("city like ?", "%#{query}")
+    where("city like ?", "%#{query.capitalize}")
+  end
+
+  def add_quantity(quantity)
+    @quantity = quantity
   end
 end
