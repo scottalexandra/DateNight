@@ -6,8 +6,7 @@ class ItinerariesController < ApplicationController
   end
 
   def create
-    @User = User.find(current_user.id)
-    @itinerary = @user.itineraries.new(itinerary_params)
+    @itinerary = current_user.itineraries.new(itinerary_params)
     if @itinerary.save
       redirect_to user_path(current_user.id)
     else
@@ -17,11 +16,11 @@ class ItinerariesController < ApplicationController
   end
 
   def index
-    @upcoming_itineraries = User.find(current_user.id).itineraries.where(status: "upcoming")
-    @past_itineraries = User.find(current_user.id).itineraries.where(status: "past")
+    @upcoming_itineraries = current_user.itineraries.where(status: "upcoming")
+    @past_itineraries = current_user.itineraries.where(status: "past")
   end
 
   def show
-    @itinerary = User.find(current_user.id).includes(:itinerary).where(id: params[:id])
+    @itinerary = current_user.includes(:itinerary).where(id: params[:id])
   end
 end
