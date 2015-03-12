@@ -23,6 +23,7 @@ gem 'figaro'
 gem 'faker'
 gem 'gmaps4rails'
 gem 'underscore-rails'
+gem 'faraday'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -285,6 +285,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   database_cleaner
   faker
+  faraday
   figaro
   gmaps4rails
   google-api-client
