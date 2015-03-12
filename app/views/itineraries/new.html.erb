@@ -3,7 +3,7 @@
     <div class="panel-body">
       <h1>New Date Itinerary</h1>
       <div class="itinerary-events-list">
-        <% @events.each do |event| %>
+        <% @itinerary.events.each do |event| %>
           <div class="event-time col-md-12">
             <h3><%= time_tag(event.formatted_time(event.time)) %></h3>
           </div>

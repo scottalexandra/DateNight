@@ -2,8 +2,38 @@
 <script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script>
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=La+Belle+Aurore" />
 
-<div class="col-md-12" style="width: 600px;">
-  <div id="itinerary-map" style="width: 600px; height: 400px;"></div>
+<div class="itinerary container">
+  <div class="panel panel-default event-details">
+    <div class="panel-body">
+      <h1><%= @itinerary.title %></h1>
+      <div class="itinerary-events-list">
+        <% @itinerary.events.each do |event| %>
+          <div class="event-time col-md-12">
+            <h3><%= time_tag(event.formatted_time(event.time)) %></h3>
+          </div>
+          <div class="event-title col-md-12">
+            <h4><%= link_to "#{event.title}", event.url %></h4>
+          </div>
+          <div class="event-description col-md-12">
+            <%= event.description %>
+          </div>
+          <div class="event-place col-md-12">
+            <%= event.place %>
+          </div>
+          <div class="event-address col-md-12">
+            <%= event.address %>
+          </div>
+          <div class="event-city-state-zip col-md-12">
+            <%= "#{event.city}, #{event.state} #{event.postal_code}" %>
+          </div>
+        <% end %><hr>
+        </div>
+        <div class="col-md-12" style="width: 600px;">
+          <div id="itinerary-map" style="width: 600px; height: 400px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 

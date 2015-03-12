@@ -77,6 +77,8 @@ GEM
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    eventfulapi (2.2.1)
+      mime-types (> 0.0.0)
     execjs (2.3.0)
     extlib (0.9.16)
     faker (1.4.3)
@@ -284,7 +286,9 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.1.0)
   database_cleaner
+  eventfulapi
   faker
+  faraday
   figaro
   gmaps4rails
   google-api-client

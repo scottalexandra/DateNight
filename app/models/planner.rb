@@ -19,11 +19,13 @@ class Planner
     @data.delete_if { |_event, quantity| quantity == 0 }
   end
 
-  def events(itinerary)
+  def events
+    events = []
     data.each do |event_id, quantity|
       event = Event.find(event_id.to_i)
       event.add_quantity(quantity)
-      itinerary.events << event
+      events << event
     end
+    events
   end
 end
