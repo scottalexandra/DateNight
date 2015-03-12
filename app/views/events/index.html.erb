@@ -2,7 +2,6 @@
 <div class="site-wrapper col-lg-12">
   <div class="site-wrapper-inner">
     <div class="cover-container">
-      <h1>Date Night</h1>
     </div>
     <div class="events-list container">
       <div class="panel panel-default upcoming-dates">
@@ -26,7 +25,7 @@
                 <%= event.city %> , <%= event.state %>  <%= event.postal_code %>
               </div>
               <div class="event-time col-md-12">
-                <%= event.time %>
+                <%= time_tag(event.formatted_time(event.time)) %>
               </div>
             </div>
           <% end %>

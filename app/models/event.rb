@@ -12,4 +12,8 @@ class Event < ActiveRecord::Base
   def add_quantity(quantity)
     @quantity = quantity
   end
+
+  def formatted_time(time)
+    DateTime.parse(time)
+  end
 end
