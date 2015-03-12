@@ -18,8 +18,8 @@
               <div class="search">
                 <%= form_tag(events_path, :method => "get", class: "navbar-form", id: "search_form") do %>
                     <%= text_field_tag :search, params[:search], class: "span2", placeholder: "Search By City" %>
-                    <button class="btn btn-link" name="search-button" type= "submit">
-                      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    <button class="btn btn-link search-btn" name="search-button" type= "submit">
+                      <i class="fa fa-search"></i>
                     </button>
                 <% end %>
               </div>
@@ -38,7 +38,7 @@
                 </a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                   <li><%= link_to "My Profile", user_path(current_user.id) %></li>
-                  <li><%= link_to "DatePlanner", new_itinerary_path, class: "glyphicon glyphicon-heart-empty" %></li>
+                  <li><%= link_to "DatePlanner", new_itinerary_path, class: "fa fa-heart-o" %></li>
                   <li><%= link_to "About", about_path %></li>
                   <li><%= link_to "Contact Us", contact_path %></li>
                   <li><%= link_to "Log Out", logout_path %></li>
@@ -46,7 +46,7 @@
               </li>
               <li>
                 <div class="date-planner-btn">
-                  <%= link_to "DatePlanner", new_itinerary_path, class: "glyphicon glyphicon-heart-empty" %>
+                  <%= link_to "DatePlanner", new_itinerary_path, class: "fa fa-heart-o" %>
                 </div>
               </li>
             <% else %>

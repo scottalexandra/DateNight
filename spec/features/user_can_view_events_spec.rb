@@ -63,7 +63,7 @@ describe "authenticated user" do
     end
 
     within(".event-time") do
-      expect(page).to have_content("May 2, 2015 3pm")
+      expect(page).to have_content("May 02, 2015")
     end
 
     within(".event-place") do

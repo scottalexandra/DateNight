@@ -14,6 +14,7 @@ gem 'unicorn'
 gem 'pg'
 gem 'rails_12factor', group: :production
 gem 'twitter-bootstrap-rails'
+# gem 'font-awesome-less'
 # gem 'bootstrap-sass'
 gem "bootstrap_form"
 gem 'google-api-client'

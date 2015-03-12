@@ -1,14 +1,11 @@
+//date planner
 
-// location
-#location {
-  color: white;
-  border-color: yellow;
-}
-
-#current-location {
-  font-size: 30px;
+.itinerary .panel-body h1 {
+  color: black;
   font-family: "Helvetica Neue";
 }
+
+
 
 //events
   .panel {
@@ -34,22 +31,17 @@
     padding-top: 10px;
     width: 150px;
     height: 150px;
-    // margin-left: 20px;
-    // float: right;
     padding-bottom: 10px;
-    // text-align: left;
   }
 
   .events-list .event-title {
     padding: 15px;
     text-align: left;
-    // float: left;
   }
 
   .event-description {
     padding: 15px;
     text-align: left;
-    // float: left;
   }
 
   .event-address {
@@ -61,13 +53,12 @@
   }
   .event-time {
     text-align: left;
-    // float: left;
   }
+
 //welcome page
 
 .welcome-container {
   background: url('fuzzy.jpg') center center fixed;
-  // background-color: black;
   background-size: 100%;
   height: 1000px;
   margin-top: 50px;
@@ -86,35 +77,21 @@
 
 .welcome-container .btn-link {
   font-family: 'La Belle Aurore';
-  // font-family: "Helvetica Neue";
   color: white;
-  // opacity: 0;
-  // background-color: darkgrey;
-  // margin-left: 600px;
   margin-top: 200px;
   float: left;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-right: 10px;
   padding-left: 10px;
-  // border-color: purple;
   font-size: 40px;
-
 }
-//events page welcome page
 
-  //site wrapper
-  .site-container {
-    // width: 100%;
-    // height: 1000px;
-  }
+//events page welcome page
 
   .site-wrapper {
     background: url('fuzzy.jpg') center center fixed;
-    // background-repeat: no-repeat;
-    // margin-top: 50px;
     background-size: 100%;
-    // opacity: 1.0;
   }
 
   .site-wrapper {
@@ -158,7 +135,6 @@
 #navbar {
   float: right;
   font-family: "Helvetica Neue";
-  // font-family: "Just Another Hand";
   color: purple;
 }
 
@@ -167,9 +143,17 @@
   font-size: 20px;
 }
 
-#navbar .search {
-  font-size: 24px;
-  margin-bottom: 10px;
+#search_form {
+  margin-top: 0;
+}
+
+.date-planner-btn {
+  margin-top: 8px;
+}
+
+.date-planner-btn :hover {
+  text-decoration: none;
+  color: white;
 }
 
 //user show page
