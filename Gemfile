@@ -24,6 +24,7 @@ gem 'faker'
 gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'faraday'
+gem 'eventfulapi', require: 'eventful/api'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
