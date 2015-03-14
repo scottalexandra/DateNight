@@ -9,9 +9,17 @@
 
 //events
   .panel {
-    opacity: 0.7;
-    width: 60%;
+    opacity: 0.9;
+    width: 80%;
     margin: auto;
+  }
+
+  .panel{
+    margin-top: 100px;
+  }
+
+  .panel-body h2 {
+    color: orange;
   }
 
   .event-details {
@@ -57,10 +65,31 @@
 
 //welcome page
 
+.select-date select {
+  width: 120px;
+}
+
+.search-field input {
+  width: 240px;
+  height: 30px;
+}
+
+.select-category select {
+  width: 120px;
+}
+.navbar .navbar-default style {
+  margin-left: 100px;
+  padding-top: 100px;
+}
+
+.navbar-default .container-fluid {
+  padding: 0;
+}
+
 .welcome-container {
-  background: url('fuzzy.jpg') center center fixed;
+  background: url('couple-sitting.jpg') center center fixed;
   background-size: 100%;
-  height: 1000px;
+  height: 800px;
   margin-top: 50px;
   padding-left: 15px;
   position: relative;
@@ -72,7 +101,14 @@
   color: white;
   float: left;
   margin-left: 100px;
-  padding-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.welcome-container .explore-the-possibilities h3 {
+  font-family: "Helvetica Neue";
+  font-size: 30px;
+  color: orange;
 }
 
 .welcome-container .btn-link {
@@ -87,11 +123,12 @@
   font-size: 40px;
 }
 
-//events page welcome page
+//events index page
 
   .site-wrapper {
-    background: url('fuzzy.jpg') center center fixed;
     background-size: 100%;
+    background-color: azure;
+    height: 1000px;
   }
 
   .site-wrapper {
@@ -104,13 +141,12 @@
     font-size: 100px;
     text-align: left;
     font-family: 'La Belle Aurore';
-    color: white;
+    color: orange;
   }
 
   .site-wrapper .btn .btn-default {
     float: right;
   }
-
 
   //navbar
 .navbar-wrapper .container {
@@ -132,6 +168,10 @@
   font-size: 20px;
 }
 
+.navbar-brand a :hover {
+  color: orange;
+}
+
 #navbar {
   float: right;
   font-family: "Helvetica Neue";
@@ -141,6 +181,10 @@
 #navbar li {
   float: left;
   font-size: 20px;
+}
+
+#navbar li :hover {
+  color: orange;
 }
 
 #search_form {
@@ -159,10 +203,13 @@
 //user show page
 
 body {
-  background: url('fuzzy.jpg') no-repeat center center fixed;
   background-size: 100%;
+  background-color: azure;
 }
 
+.profile-info {
+  background-color: azure;
+}
 
 .profile-info .panel-heading {
   font-family: "Helvetica Neue";
@@ -179,7 +226,7 @@ body {
   padding-top: 10px;
   margin-top: 60px;
   padding-bottom: 10px;
-  color: white;
+  color: orange;
 }
 
 .profile-info .account-details .edit {

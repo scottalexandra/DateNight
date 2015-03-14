@@ -1,4 +1,10 @@
-class Event
+class Event < ActiveRecord::Base
+  validates_presence_of :title, :time, :city, :state
+  has_many :itinerary_events
+  has_many :itineraries, through: :itinerary_events
+
+  attr_reader :quantity
+
   def self.service
     @service ||= EventfulService.new
   end
@@ -7,8 +13,8 @@ class Event
     _build_object(service.event(id))
   end
 
-  def self.all
-    service.events.map do |event|
+  def self.all(keyword="Art", location="Denver", time="Today")
+    service.events(keyword, location, time).map do |event|
       _build_object(event)
     end
   end
@@ -16,6 +22,7 @@ class Event
   def self._build_object(data)
     event = OpenStruct.new(data)
     event.description = sanitized_description(event.description)
+    event.start_time = parsed_time(event.start_time)
     event
   end
 
@@ -23,4 +30,15 @@ class Event
     Nokogiri::HTML(description).text
   end
 
+  def self.parsed_time(time)
+    time.strftime("%A, %b, %d, %Y, %I:%M %P")
+  end
+
+  def self.search_time(month, day, year)
+    "#{month.to_i}/#{day.to_i}/#{year.to_i}"
+  end
+
+  def add_quantity(quantity)
+    @quantity = quantity
+  end
 end

@@ -5,18 +5,19 @@ class EventfulService
     @connection = Eventful::API.new 'DdBNfvmp5tfQ7zGr'
   end
 
-  def events
-    events = connection.call('events/search', :keywords => "music", :location => "Denver", :t => "Next 30 days", :page_size => 2)
-    if events.count == 1
-      Array.new(events["events"]["event"])
-    else
-      events["events"]["event"]
-    end
+  def events(keyword="art", location="Denver", time="Today")
+    events = connection.call('events/search',
+                             :keywords => keyword,
+                             :location => location,
+                             :t => time,
+                             :page_size => 2
+                             )
+    events["events"]["event"]
   end
 
-  # def event
-    # parse(connection.get("events/#{id}"))
-  # end
+  def event(id)
+    event = connection.call('events/get', :id => id )
+  end
 
   private
 

@@ -1,6 +1,7 @@
 class ItinerariesController < ApplicationController
   def new
     @itinerary = current_user.itineraries.new
+    
     @itinerary.events << @planner.events
 
   end
