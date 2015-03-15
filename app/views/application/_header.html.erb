@@ -34,6 +34,9 @@
               <li>
                 <div class="date-planner-btn">
                   <%= link_to "DatePlanner", new_itinerary_path, class: "fa fa-heart-o" %>
+                  <span class="date-planner-count">
+                    <%= @planner.count(@planner.data) %>
+                  </span>
                 </div>
               </li>
             <% else %>

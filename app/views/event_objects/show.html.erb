@@ -7,24 +7,21 @@
     <div class="events-list container">
       <div class="panel panel-default event-details">
         <div class="panel-body">
-          <div class="link-back">
-            <%= link_to "Back", events_path, class: "fa fa-reply" %>
-          </div>
           <div class="event-title col-md-12">
             <h2><%= link_to @event.title, @event.url %></h2>
           </div>
           <div class="add-to-itinerary col-md-12">
-            <h5><%= link_to "Add To Itinerary", planners_path(title: @event.title,
-                                                                   description: @event.description,
-                                                                   time: @event.start_time,
-                                                                   place: @event.venue_name,
-                                                                   address: @event.venue_address,
-                                                                   city: @event.city,
-                                                                   state: @event.region_abbr,
-                                                                   postal_code: @event.postal_code,
-                                                                   latitude: @event.latitude,
-                                                                   longitude: @event.longitude
-                                                                   ), method: :post, class: "btn btn-default" %></h5>
+            <h5><%= link_to "Add To Itinerary", event_objects_path(title: @event.title,
+                                                              description: @event.description,
+                                                              time: @event.start_time,
+                                                              place: @event.venue_name,
+                                                              address: @event.venue_address,
+                                                              city: @event.city,
+                                                              state: @event.region_abbr,
+                                                              postal_code: @event.postal_code,
+                                                              latitude: @event.latitude,
+                                                              longitude: @event.longitude
+                                                              ), method: :post, class: "btn btn-default" %></h5>
           </div>
           <div class="col-md-12" style="width: 600px;">
             <div id="map-canvas" style="width: 600px; height: 200px;"></div>

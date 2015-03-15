@@ -1,11 +1,11 @@
-<div class="itinerary container">
+<div class="itinerary container col-lg-12">
   <div class="panel panel-default event-details">
     <div class="panel-body">
       <h1>New Date Itinerary</h1>
       <div class="itinerary-events-list">
-        <% @itinerary.events.each do |event| %>
+        <% @itinerary.event_objects.each do |event| %>
           <div class="event-time col-md-12">
-            <h3><%= time_tag(event.formatted_time(event.time)) %></h3>
+            <h3><%= event.time %></h3>
           </div>
           <div class="event-title col-md-12">
             <h4><%= link_to "#{event.title}", event.url %></h4>
@@ -20,7 +20,7 @@
             <%= event.address %>
           </div>
           <div class="event-city-state-zip col-md-12">
-            <%= "#{event.city}, #{event.state} #{event.postal_code}" %>
+            <%= event.city %>, <%= event.state %> <%= event.postal_code %>
           </div>
           <div class="remove-event-btn" col-md-12>
             <%= link_to "Remove Event", planners_path(event_id: event.id), method: :delete, class: "btn btn-link" %>

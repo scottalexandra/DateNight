@@ -4,6 +4,6 @@ class UsersController < ApplicationController
   end
 
   def show
-  
+    @itineraries = current_user.itineraries.order("created_at DESC")
   end
 end
