@@ -1,10 +1,4 @@
-class Event < ActiveRecord::Base
-  validates_presence_of :title, :time, :city, :state
-  has_many :itinerary_events
-  has_many :itineraries, through: :itinerary_events
-
-  attr_reader :quantity
-
+class Event
   def self.service
     @service ||= EventfulService.new
   end
@@ -36,9 +30,5 @@ class Event < ActiveRecord::Base
 
   def self.search_time(month, day, year)
     "#{month.to_i}/#{day.to_i}/#{year.to_i}"
-  end
-
-  def add_quantity(quantity)
-    @quantity = quantity
   end
 end

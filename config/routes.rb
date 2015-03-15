@@ -9,8 +9,9 @@ Rails.application.routes.draw do
   get 'contact', to: 'welcome#contact'
   get 'map', to: 'welcome#map'
   resources :users, only: [:create, :show, :edit, :update]
-  resources :events, only: [:new, :create, :index, :show]
-  resources :itineraries, only: [:new, :create, :show, :index, :edit, :update]
+  resources :events, only: [:index, :show]
+  resources :event_objects, only: [:new, :create, :show]
+  resources :itineraries
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

@@ -1,14 +1,12 @@
 class ItinerariesController < ApplicationController
   def new
     @itinerary = current_user.itineraries.new
-    
-    @itinerary.events << @planner.events
-
+    @itinerary.event_objects << @planner.events
   end
 
   def create
     @itinerary = current_user.itineraries.new(itinerary_params)
-    @itinerary.events << @planner.events
+    @itinerary.event_objects << @planner.events
     if @itinerary.save
       session[:planner] = nil
       redirect_to user_path(current_user.id)
@@ -20,7 +18,14 @@ class ItinerariesController < ApplicationController
 
   def show
     @itinerary = current_user.itineraries.where(id: params[:id]).take
-    @latlng = Map.latlng(@itinerary.events)
+    @latlng = Map.latlng(@itinerary.event_objects)
+  end
+
+  def destroy
+    @itinerary = Itinerary.find(params[:id])
+    @itinerary.destroy_event_objects
+    Itinerary.destroy(@itinerary.id)
+    redirect_to user_path(current_user.id)
   end
 
   private

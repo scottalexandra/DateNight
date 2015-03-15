@@ -7,9 +7,14 @@
     <div class="panel panel-default upcoming-dates">
       <div class="panel-heading">Upcoming Dates</div>
       <div class="panel-body">
-        <% current_user.itineraries.each do |itinerary| %>
+        <% @itineraries.each do |itinerary| %>
+        <div class="itinerary-display">
           Title: <%= link_to itinerary.title, itinerary_path(itinerary.id) %><br>
-          Description: <%= itinerary.description %><br><hr>
+          Description: <%= itinerary.description %>
+          <span class="destroy-itinerary">
+            <%= link_to "delete", itinerary_path(itinerary.id), method: :delete %>
+          </span><hr>
+        </div>
         <% end %>
       </div>
     </div>
