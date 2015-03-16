@@ -1,3 +1,8 @@
+body {
+  background-size: 100%;
+  background-color: azure;
+}
+
 //date planner
 
 .itinerary .panel-body h1 {
@@ -11,11 +16,10 @@
   opacity: 0.9;
 }
 
-.itinerary {
-  background-color: azure;
-  background-size: 100%;
-  height: 800px;
-}
+// .itinerary {
+  // background-color: azure;
+  // background-size: 100%;
+// }
 
 .itinerary .panel-default {
   margin-top: 100px;
@@ -45,7 +49,6 @@
 
   .events-list {
     margin-top: 30px;
-    background-size: 100%;
   }
 
   .event-info {
@@ -103,12 +106,11 @@
 }
 
 .welcome-container {
-  background: url('couple-sitting.jpg') center center;
+  background: url('couple-sitting.jpg') fixed no-repeat;
   background-size: 100%;
-  height: 800px;
-  margin-top: 50px;
-  padding-left: 15px;
-  position: relative;
+  height: 1000px;
+  // margin-top: 50px;
+  // padding-left: 15px;
 }
 
 .welcome-container h1 {
@@ -117,12 +119,13 @@
   color: white;
   float: left;
   margin-left: 100px;
-  padding-top: 50px;
+  padding-top: 100px;
   padding-bottom: 20px;
 }
 
 .welcome-container .explore-the-possibilities h3 {
   font-family: "Helvetica Neue";
+  padding-left: 300px;
   font-size: 30px;
   color: orange;
 }
@@ -144,7 +147,6 @@
   .site-wrapper {
     background-size: 100%;
     background-color: azure;
-    height: 1000px;
   }
 
   .site-wrapper {
@@ -222,10 +224,6 @@
 
 //user show page
 
-body {
-  background-size: 100%;
-  background-color: azure;
-}
 
 .profile-info {
   background-color: azure;
