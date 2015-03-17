@@ -11,7 +11,7 @@ RSpec.describe Itinerary, :type => :model do
   end
 
   scenario "it has many events through itinerary-events" do
-    should have_many(:events).through(:itinerary_events)
+    should have_many(:event_objects).through(:itinerary_events)
   end
 
   scenario "it is not valid without a user" do

@@ -10,7 +10,7 @@ class EventfulService
                              :keywords => keyword,
                              :location => location,
                              :t => time,
-                             :page_size => 2
+                             :page_size => 10
                              )
     events["events"]["event"]
   end
@@ -18,10 +18,4 @@ class EventfulService
   def event(id)
     event = connection.call('events/get', :id => id )
   end
-
-  private
-
-  # def parse(response)
-    # JSON.parse(response.body)
-  # end
 end

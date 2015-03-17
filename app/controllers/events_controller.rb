@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+
   def index
     if params[:search]
     @events = Event.all(params[:category],
