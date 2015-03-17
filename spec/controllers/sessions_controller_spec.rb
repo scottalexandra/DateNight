@@ -28,7 +28,7 @@ RSpec.describe SessionsController, :type => :controller do
                   email: "murphy.robinson3@gmail.com",
                   uid: "123127235098235")
       post :create
-      expect(User.count).to eq(1)
+      expect(User.count).to eq(3)
     end
   end
 end
