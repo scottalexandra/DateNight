@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Event, :type => :model do
+RSpec.describe EventObject, :type => :model do
   scenario "it is not valid without a title" do
     should validate_presence_of(:title)
   end

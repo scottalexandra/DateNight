@@ -14,8 +14,6 @@ gem 'unicorn'
 gem 'pg'
 gem 'rails_12factor', group: :production
 gem 'twitter-bootstrap-rails'
-# gem 'font-awesome-less'
-# gem 'bootstrap-sass'
 gem "bootstrap_form"
 gem 'google-api-client'
 gem 'omniauth-google-oauth2'
@@ -23,13 +21,13 @@ gem 'figaro'
 gem 'faker'
 gem 'gmaps4rails'
 gem 'underscore-rails'
-gem 'faraday'
 gem 'eventfulapi', require: 'eventful/api'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'vcr'
   gem 'shoulda-matchers', require: false
   gem 'byebug'
   gem 'better_errors'

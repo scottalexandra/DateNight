@@ -3,10 +3,10 @@ class SessionsController < ApplicationController
     @user = User.find_or_create_from_auth(auth)
     if @user
       session[:user_id] = @user.id
-      redirect_to :back
+      redirect_to events_path
     else
       flash[:error] = "Invalid Login"
-      redirect_to :back
+      redirect_to root_path
     end
   end
 

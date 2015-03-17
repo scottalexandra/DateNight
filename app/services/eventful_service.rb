@@ -18,10 +18,4 @@ class EventfulService
   def event(id)
     event = connection.call('events/get', :id => id )
   end
-
-  private
-
-  # def parse(response)
-    # JSON.parse(response.body)
-  # end
 end
