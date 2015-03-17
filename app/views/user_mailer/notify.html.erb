@@ -1,0 +1,13 @@
+<h1><%= @itinerary.title %></h1>
+<h3><%= @itinerary.description %></h3>
+<div class="event-list">
+  <% @itinerary.event_objects.each do |event| %>
+    <p>
+      <%= event.title %>
+      <%= event.description %>
+      <%= event.time %>
+      <%= event.address %>
+      <%= event.city %>, <%= event.state %> <%= event.postal_code %>
+    </p>
+  <% end %>
+</div><hr>

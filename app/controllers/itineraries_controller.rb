@@ -8,6 +8,7 @@ class ItinerariesController < ApplicationController
     @itinerary = current_user.itineraries.new(itinerary_params)
     @itinerary.event_objects << @planner.events
     if @itinerary.save
+      EmailJob.new.perform(current_user, @itinerary)
       session[:planner] = nil
       redirect_to user_path(current_user.id)
     else
