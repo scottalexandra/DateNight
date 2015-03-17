@@ -3,6 +3,10 @@ body {
   background-color: azure;
 }
 
+.show {
+  background-color: azure;
+}
+
 //date planner
 
 .itinerary .panel-body h1 {
@@ -15,11 +19,6 @@ body {
 .itinerary .panel-body {
   opacity: 0.9;
 }
-
-// .itinerary {
-  // background-color: azure;
-  // background-size: 100%;
-// }
 
 .itinerary .panel-default {
   margin-top: 100px;
@@ -225,9 +224,10 @@ body {
 //user show page
 
 
-.profile-info {
-  background-color: azure;
-}
+// .profile-info {
+//   background-color: azure;
+//   background-size: 100%;
+// }
 
 .profile-info .panel-heading {
   font-family: "Helvetica Neue";

@@ -2,7 +2,7 @@ class EventfulService
   attr_reader :connection
 
   def initialize
-    @connection = Eventful::API.new ENV['EVENTFUL_API_KEY']
+    @connection = Eventful::API.new 'ENV['EVENTFUL_API_KEY']'
   end
 
   def events(keyword="art", location="Denver", time="Today")
