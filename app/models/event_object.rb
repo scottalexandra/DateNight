@@ -8,4 +8,19 @@ class EventObject < ActiveRecord::Base
   def add_quantity(quantity)
     @quantity = quantity
   end
+
+  def self.create_event(params)
+    EventObject.create!(
+      title: params[:title],
+      description: params[:description],
+      time: params[:time],
+      place: params[:place],
+      address: params[:address],
+      city: params[:city],
+      state: params[:state],
+      postal_code: params[:postal_code],
+      latitude: params[:latitude],
+      longitude: params[:longitude]
+      )
+  end
 end

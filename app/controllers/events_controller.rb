@@ -1,14 +1,7 @@
 class EventsController < ApplicationController
 
   def index
-    if params[:search]
-    @events = Event.all(params[:category],
-                        params[:search],
-                        Event.search_time(params[:date][:month], params[:date][:day], params[:date][:year])
-                        ).sort{|e, f| e.start_time <=> f.start_time }
-    else
-      @events = Event.all
-    end
+    @events = EventPresenter.new(params).events
   end
 
   def show

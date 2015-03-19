@@ -16,7 +16,7 @@ class Planner
 
   def remove_event(event_object_id)
     @data[event_object_id] -= 1
-    @data.delete_if { |_event, quantity| quantity == 0 }
+    @data.delete_if { |event, quantity| quantity == 0 }
   end
 
   def events

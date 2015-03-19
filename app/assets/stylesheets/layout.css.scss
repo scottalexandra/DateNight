@@ -3,6 +3,11 @@ body {
   background-color: azure;
 }
 
+#full-length-background {
+  background-size: 100%;
+  background-color: azure;
+}
+
 //date planner
 
 .itinerary .panel-body h1 {
@@ -16,14 +21,11 @@ body {
   opacity: 0.9;
 }
 
-// .itinerary {
-  // background-color: azure;
-  // background-size: 100%;
-// }
-
 .itinerary .panel-default {
   margin-top: 100px;
 }
+
+
 
 
 
@@ -219,15 +221,16 @@ body {
 }
 
 .date-planner-count {
-  color: pink;
+  color: purple;
 }
 
 //user show page
 
 
-.profile-info {
-  background-color: azure;
-}
+// .profile-info {
+//   background-color: azure;
+//   background-size: 100%;
+// }
 
 .profile-info .panel-heading {
   font-family: "Helvetica Neue";

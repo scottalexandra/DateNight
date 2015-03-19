@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default col-md-10">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <form class="navbar-form navbar-left" role="search">
+      <%= form_tag(events_path, :method => "get", class: "navbar-form", id: "search_form") do %>
+        <span class="select-date">
+          <%= select_date Date.today, prefix: :date %>
+        </span>
+        <span class="select-category">
+          <%= select_tag(:category, options_for_select([["Music", "music"], ["Art", "art"], ["Dance", "dance"]])) %>
+        </span>
+        <span class ="search-field">
+          <%= text_field_tag :search, params[:search], placeholder: "Enter A City" %>
+        </span>
+        <button class="btn btn-primary search-btn" name="search-button" type= "submit">Search For Events</button>
+      <% end %>
+    </form>
+    </div>
+  </div>
+</nav>

@@ -1,14 +1,17 @@
 class EventPresenter
 
-  def initialize(search_params)
-    @search_params = search_params
+  def initialize(params)
+    @params = params
   end
 
   def events
-    if @search_params
-      Event.search(@search_params).order("time ASC")
+    if @params[:search]
+    @events = Event.all(@category_params,
+                        @search_params,
+                        Event.search_time(@params[:date][:month], @params[:date][:day], @params[:date][:year])
+                        ).sort{|e, f| e.start_time <=> f.start_time }
     else
-      Event.order("time ASC")
+      @events = Event.all
     end
   end
 end
