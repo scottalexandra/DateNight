@@ -1,15 +1,15 @@
 <div class="itinerary container col-lg-12">
   <div class="panel panel-default event-details">
-    <%= link_to "Back To Events", events_path, class: "btn btn-link" %>
     <div class="panel-body">
-      <h1>New Date Itinerary</h1>
       <div class="itinerary-events-list">
+        <%= link_to "Back To Events", events_path, class: "btn btn-link" %>
+        <h1>New Date Itinerary</h1>
         <% @itinerary.event_objects.each do |event| %>
           <div class="event-time col-md-12">
             <h3><%= event.time %></h3>
           </div>
           <div class="event-title col-md-12">
-            <h4><%= link_to "#{event.title}", event.url %></h4>
+            <h4><%= link_to event.title, event.url %></h4>
           </div>
           <div class="event-description col-md-12">
             <%= event.description %>

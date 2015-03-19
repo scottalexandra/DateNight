@@ -12,6 +12,7 @@ body {
 
 .itinerary .panel-body h1 {
   color: orange;
+  padding-left: 14px;
   font-family: "Helvetica Neue";
   margin-top: 0;
 
@@ -42,8 +43,12 @@ body {
 
   .panel-body h2 {
     color: orange;
+    padding-left: 29px;
   }
 
+  hr {
+    width: 100%;
+  }
   .event-details {
     width: 60%;
     margin: auto;
@@ -54,7 +59,7 @@ body {
   }
 
   .event-info {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
   .event-image {
     padding-top: 10px;
@@ -87,16 +92,18 @@ body {
 //welcome page
 
 .select-date select {
-  width: 120px;
+  width: 100px;
+  height: 34px;
 }
 
 .search-field input {
   width: 240px;
-  height: 30px;
+  height: 34px;
 }
 
 .select-category select {
   width: 120px;
+  height: 34px;
 }
 .navbar .navbar-default style {
   margin-left: 100px;

@@ -6,8 +6,8 @@
     <div class="panel-body">
       <% @itineraries.each do |itinerary| %>
       <div class="itinerary-display">
-        Title: <%= link_to itinerary.title, itinerary_path(itinerary.id) %><br>
-        Description: <%= itinerary.description %>
+        <%= link_to itinerary.title, itinerary_path(itinerary.id) %><br>
+        <%= itinerary.description %>
         <span class="destroy-itinerary">
           <%= link_to "delete", itinerary_path(itinerary.id), method: :delete %>
         </span><hr>

@@ -8,13 +8,13 @@
       <div class="panel panel-default event-details">
         <div class="panel-body">
           <div class="link-back">
-            <%= link_to "Back", events_path, class: "fa fa-reply" %>
           </div>
           <div class="event-title col-md-12">
+            <%= link_to " Back", events_path, class: "fa fa-reply" %>
             <h2><%= link_to @event.title, @event.url %></h2>
           </div>
           <div class="add-to-itinerary col-md-12">
-            <h5><%= link_to "Add To DatePlanner",
+            <h5><%= link_to " Add To DatePlanner",
                     planners_path(title: @event.title,
                                   description: @event.description,
                                   time: @event.start_time,
