@@ -6,8 +6,8 @@ class EventPresenter
 
   def events
     if @params[:search]
-    @events = Event.all(@category_params,
-                        @search_params,
+    @events = Event.all(@params[:category],
+                        @params[:search],
                         Event.search_time(@params[:date][:month], @params[:date][:day], @params[:date][:year])
                         ).sort{|e, f| e.start_time <=> f.start_time }
     else
