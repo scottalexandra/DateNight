@@ -204,24 +204,27 @@ body {
 }
 
 #navbar li :hover {
-  color: orange;
+  color: white;
 }
 
 #search_form {
   margin-top: 0;
 }
 
-.date-planner-btn {
+.date-planner-btn a {
   margin-top: 9px;
+  color: white;
+  opacity: 0.7;
 }
 
 .date-planner-btn :hover {
   text-decoration: none;
   color: white;
+  opacity: 1;
 }
 
 .date-planner-count {
-  color: purple;
+  color: white;
 }
 
 //user show page
