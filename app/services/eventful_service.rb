@@ -10,7 +10,7 @@ class EventfulService
                              :keywords => keyword,
                              :location => location,
                              :t => time,
-                             :page_size => 10
+                             :page_size => 100  
                              )
     events["events"]["event"]
   end

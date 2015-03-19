@@ -1,26 +1,18 @@
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=La+Belle+Aurore" />
-<!-- <div class="show-container"> -->
-  <!-- <div class="user-profile-heading"> -->
-  <!-- </div> -->
-  <div class="show container profile-info", style = "margin-left: 0px, margin-right: 0px; width: 100%">
-    <h1><%= current_user.name %> > My Profile</h1>
-    <div class="panel panel-default upcoming-dates">
-      <div class="panel-heading">Upcoming Dates</div>
-      <div class="panel-body">
-        <% @itineraries.each do |itinerary| %>
-        <div class="itinerary-display">
-          Title: <%= link_to itinerary.title, itinerary_path(itinerary.id) %><br>
-          Description: <%= itinerary.description %>
-          <span class="destroy-itinerary">
-            <%= link_to "delete", itinerary_path(itinerary.id), method: :delete %>
-          </span><hr>
-        </div>
-        <% end %>
+<div class="show container profile-info", id="full-length-background" style = "margin-left: 0px, margin-right: 0px; width: 100%">
+  <h1><%= current_user.name %>'s Profile</h1>
+  <div class="panel panel-default upcoming-dates">
+    <div class="panel-heading">My Date Itineraries</div>
+    <div class="panel-body">
+      <% @itineraries.each do |itinerary| %>
+      <div class="itinerary-display">
+        Title: <%= link_to itinerary.title, itinerary_path(itinerary.id) %><br>
+        Description: <%= itinerary.description %>
+        <span class="destroy-itinerary">
+          <%= link_to "delete", itinerary_path(itinerary.id), method: :delete %>
+        </span><hr>
       </div>
-    </div>
-    <div class="panel panel-default past-dates">
-      <div class="panel-heading">Past Dates</div>
-      <div class="panel-body">No Past Dates</div>
+      <% end %>
     </div>
   </div>
-<!-- </div> -->
+</div>

@@ -1,0 +1,17 @@
+<% content_for :scripts do %>
+  <script type="text/javascript">
+
+
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {},
+      internal: {id: 'map-canvas'} }, function(){
+
+      markers = handler.addMarkers(<%= raw @latlng.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+      handler.getMap().setZoom(15);
+
+    });
+
+  </script>
+<% end %>

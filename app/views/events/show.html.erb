@@ -14,56 +14,26 @@
             <h2><%= link_to @event.title, @event.url %></h2>
           </div>
           <div class="add-to-itinerary col-md-12">
-            <h5><%= link_to "Add To Itinerary", planners_path(title: @event.title,
-                                                                   description: @event.description,
-                                                                   time: @event.start_time,
-                                                                   place: @event.venue_name,
-                                                                   address: @event.venue_address,
-                                                                   city: @event.city,
-                                                                   state: @event.region_abbr,
-                                                                   postal_code: @event.postal_code,
-                                                                   latitude: @event.latitude,
-                                                                   longitude: @event.longitude
-                                                                   ), method: :post, class: "btn btn-default" %></h5>
+            <h5><%= link_to "Add To DatePlanner",
+                    planners_path(title: @event.title,
+                                  description: @event.description,
+                                  time: @event.start_time,
+                                  place: @event.venue_name,
+                                  address: @event.venue_address,
+                                  city: @event.city,
+                                  state: @event.region_abbr,
+                                  postal_code: @event.postal_code,
+                                  latitude: @event.latitude,
+                                  longitude: @event.longitude
+                                  ), method: :post, class: "btn btn-default fa fa-heart-o" %></h5>
           </div>
           <div class="col-md-12" style="width: 600px;">
             <div id="map-canvas" style="width: 600px; height: 200px;"></div>
           </div>
-          <div class="event-description col-md-12">
-            <%= @event.description %>
-          </div>
-          <div class="event-time col-md-12">
-            <%= @event.start_time %>
-          </div>
-          <div class="event-place col-md-12">
-            <%= @event.venue_name %>
-          </div>
-          <div class="event-address col-md-12">
-            <%= @event.venue_address %>
-          </div>
-          <div class="event-city-state-zip col-md-12">
-            <%= @event.city %>, <%= @event.region_abbr %> <%= @event.postal_code %>
-          </div>
+          <%= render partial: "event_list" %>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<% content_for :scripts do %>
-  <script type="text/javascript">
-
-
-    handler = Gmaps.build('Google');
-    handler.buildMap({ provider: {},
-      internal: {id: 'map-canvas'} }, function(){
-
-      markers = handler.addMarkers(<%= raw @latlng.to_json %>);
-      handler.bounds.extendWith(markers);
-      handler.fitMapToBounds();
-      handler.getMap().setZoom(15);
-
-    });
-
-  </script>
-<% end %>
+<%= render partial: "map" %>

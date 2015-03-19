@@ -2,69 +2,14 @@
 <div class="site-wrapper col-lg-12">
   <div class="site-wrapper-inner">
     <div class="cover-container">
-        <nav class="navbar navbar-default col-md-10">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <form class="navbar-form navbar-left" role="search">
-              <%= form_tag(events_path, :method => "get", class: "navbar-form", id: "search_form") do %>
-                <span class="select-date">
-                  <%= select_date Date.today, prefix: :date %>
-                </span>
-                <span class="select-category">
-                  <%= select_tag(:category, options_for_select([["Music", "music"], ["Art", "art"], ["Dance", "dance"]])) %>
-                </span>
-                <span class ="search-field">
-                  <%= text_field_tag :search, params[:search], placeholder: "Enter A City" %>
-                </span>
-                <button class="btn btn-primary search-btn" name="search-button" type= "submit">Search For Events</button>
-              <% end %>
-            </form>
-            </div>
-          </div>
-        </nav>
+        <%= render partial: "search_bar" %>
     </div>
     <div class="events-list container">
       <div class="panel panel-default upcoming-dates">
         <div class="panel-body">
           <h2>Explore Upcoming Events...</h2>
           <% if @events.present? %>
-            <% @events.each do |event| %>
-              <div class="event-info container col-sm-12">
-                <div class="event-image col-md-7">
-                  <% if event.image.present? %>
-                    <%= image_tag(event.image["medium"]["url"]) %>
-                  <% else %>
-                    <%= image_tag("event-image.jpg", class: "event-image") %>
-                  <% end %>
-                </div>
-                <div class="event-title col-md-8">
-                  <h4><%= link_to "#{event.title}", event_path(event.id) %></h4>
-                </div><br>
-                <div class="event-description col-md-8">
-                  <%= event.description %>
-                </div>
-                <div class="venue-name col-md-8">
-                  <%= event.venue_name %>
-                </div>
-                <div class="event-address col-md-8">
-                  <%= event.venue_address %>
-                </div>
-                <div class="event-city-state col-md-8">
-                  <%= event.city_name %> , <%= event.region_abbr %>  <%= event.postal_code %>
-                </div>
-                <div class="event-time col-md-8">
-                  <%= event.start_time %>
-                </div>
-              </div>
-            <% end %>
+            <%= render partial: "events_index" %>
           <% else %>
             No Events Found
           <% end %>

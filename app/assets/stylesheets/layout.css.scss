@@ -3,7 +3,8 @@ body {
   background-color: azure;
 }
 
-.show {
+#full-length-background {
+  background-size: 100%;
   background-color: azure;
 }
 
@@ -23,6 +24,8 @@ body {
 .itinerary .panel-default {
   margin-top: 100px;
 }
+
+
 
 
 
@@ -218,7 +221,7 @@ body {
 }
 
 .date-planner-count {
-  color: pink;
+  color: purple;
 }
 
 //user show page
