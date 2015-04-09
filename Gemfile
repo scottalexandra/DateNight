@@ -24,6 +24,8 @@ gem 'underscore-rails'
 gem 'eventfulapi', require: 'eventful/api'
 gem 'faraday', '<= 0.9.0'
 gem 'sucker_punch'
+gem 'webmock'
+gem 'hashie'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -4,7 +4,7 @@ class Event
   end
 
   def self.find(id)
-    _build_object(service.event(id))
+    service.event(id)
   end
 
   def self.all(keyword="Art", location="Denver", time="Today")
