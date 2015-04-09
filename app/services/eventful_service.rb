@@ -6,16 +6,16 @@ class EventfulService
   end
 
   def events(keyword="art", location="Denver", time="Today")
-    events = parse_events(connection.call('events/search',
-                             :keywords => keyword,
-                             :location => location,
-                             :t => time,
-                             :page_size => 100
-                             ))
+    parse_events(connection.call('events/search',
+                                 :keywords => keyword,
+                                 :location => location,
+                                 :t => time,
+                                 :page_size => 1
+                                 ))
   end
 
   def event(id)
-    event = parse_event(connection.call('events/get', :id => id ))
+    parse_event(connection.call('events/get', :id => id ))
   end
 
   def parse_events(events)
@@ -23,6 +23,6 @@ class EventfulService
   end
 
   def parse_event(event)
-    Hashie::Mash.new(event["events"])
+    Hashie::Mash.new(event)
   end
 end

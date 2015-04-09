@@ -4,20 +4,29 @@ class Event
   end
 
   def self.find(id)
-    service.event(id)
+    event = service.event(id)
+    _format_object(event)
   end
 
   def self.all(keyword="Art", location="Denver", time="Today")
-    service.events(keyword, location, time).map do |event|
-      _build_object(event)
+    events = service.events(keyword, location, time)
+    if events.event.class == Array
+      events.event.map { |event| _format_object(event) }
+    elsif events.event
+      _format_object(events.event)
+    else
+      _format_object(events)
     end
   end
 
-  def self._build_object(data)
-    event = OpenStruct.new(data)
-    event.description = sanitized_description(event.description)
-    event.start_time = parsed_time(event.start_time)
-    event
+  def self._format_object(raw_event)
+    if raw_event.present?
+      raw_event.description = sanitized_description(raw_event.description)
+      raw_event.start_time = parsed_time(raw_event.start_time)
+      raw_event
+    else
+      "no events found"
+    end
   end
 
   def self.sanitized_description(description)

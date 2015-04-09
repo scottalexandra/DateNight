@@ -9,8 +9,17 @@ RSpec.describe EventfulService do
       first_event = events.event.first
 
       expect(first_event.region_abbr).to eq('CO')
-      expect(events.event.count).to eq(100)
+      expect(events.event.count).to eq(10)
     end
+  end
+
+  it "returns a list of events that contains only one event" do
+    VCR.use_cassette('eventful_service_one_event') do
+      events = @service.events
+      event = events.event
+      expect(event.region_abbr).to eq('CO')
+    end
+
   end
 
   it "returns a list of events based on the search params" do
@@ -27,8 +36,8 @@ RSpec.describe EventfulService do
 
   it "returns a specific event" do
     VCR.use_cassette('eventful_service_event') do
-      events = @service.events(1)
-      event = events.event.first
+      event = @service.event("E0-001-079718724-6")
+
       expect(event.region_abbr).to eq('CO')
       expect(event.postal_code).to eq(80010)
     end

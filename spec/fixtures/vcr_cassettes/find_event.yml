@@ -27,7 +27,7 @@ http_interactions:
       Content-Length:
       - '4036'
       Date:
-      - Thu, 09 Apr 2015 22:53:35 GMT
+      - Thu, 09 Apr 2015 22:53:30 GMT
       Server:
       - lighttpd/1.4.35
     body:
@@ -124,5 +124,5 @@ http_interactions:
         bGV0Y2hlciBDb21tdW5pdHkgU2Nob29sCnZlbnVlX3R5cGU6IGFkZHJlc3MK
         d2l0aGRyYXduOiAwCndpdGhkcmF3bl9ub3RlOiB+Cg==
     http_version: 
-  recorded_at: Thu, 09 Apr 2015 22:53:34 GMT
+  recorded_at: Thu, 09 Apr 2015 22:53:29 GMT
 recorded_with: VCR 2.9.3

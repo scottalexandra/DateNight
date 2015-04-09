@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.eventful.com/yaml/events/search
+    body:
+      encoding: UTF-8
+      string: "--1E666D29B5E749F6A145BE8A576049E6\r\nContent-Disposition: form-data;
+        name=\"keywords\";\r\n\r\nmusic\r\n--1E666D29B5E749F6A145BE8A576049E6\r\nContent-Disposition:
+        form-data; name=\"location\";\r\n\r\ndener\r\n--1E666D29B5E749F6A145BE8A576049E6\r\nContent-Disposition:
+        form-data; name=\"t\";\r\n\r\n3/17/2015\r\n--1E666D29B5E749F6A145BE8A576049E6\r\nContent-Disposition:
+        form-data; name=\"page_size\";\r\n\r\n10\r\n--1E666D29B5E749F6A145BE8A576049E6\r\nContent-Disposition:
+        form-data; name=\"app_key\";\r\n\r\nDdBNfvmp5tfQ7zGr\r\n--1E666D29B5E749F6A145BE8A576049E6--"
+    headers:
+      Content-Type:
+      - multipart/form-data; boundary=1E666D29B5E749F6A145BE8A576049E6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/x-yaml; charset=utf-8
+      Content-Length:
+      - '133'
+      Date:
+      - Thu, 09 Apr 2015 22:53:32 GMT
+      Server:
+      - lighttpd/1.4.35
+    body:
+      encoding: UTF-8
+      string: "--- \nevents: ~\nfirst_item: ~\nlast_item: ~\npage_count: 0\npage_items:
+        ~\npage_number: 1\npage_size: 10\nsearch_time: 0.015\ntotal_items: 0\n"
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 22:53:31 GMT
+recorded_with: VCR 2.9.3
