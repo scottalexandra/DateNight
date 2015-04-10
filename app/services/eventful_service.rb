@@ -15,7 +15,7 @@ class EventfulService
   end
 
   def event(id)
-    parse_event(connection.call('events/get', :id => id ))
+    connection.call('events/get', :id => id )
   end
 
   def parse_events(events)

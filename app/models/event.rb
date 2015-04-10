@@ -4,7 +4,8 @@ class Event
   end
 
   def self.find(id)
-    _format_object(service.event(id))
+    event = _parse_event(service.event(id))
+    _format_object(event)
   end
 
   def self.all(keyword="Art", location="Denver", time="Today")
@@ -26,6 +27,10 @@ class Event
     else
       "no events found"
     end
+  end
+
+  def self._parse_event(raw_event)
+    OpenStruct.new(raw_event)
   end
 
   def self.sanitized_description(description)

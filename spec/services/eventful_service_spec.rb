@@ -36,8 +36,7 @@ RSpec.describe EventfulService do
 
   it "returns a specific event" do
     VCR.use_cassette('eventful_service_event') do
-      event = @service.event("E0-001-079718724-6")
-
+      event = Hashie::Mash.new(@service.event("E0-001-079718724-6"))
       expect(event.region_abbr).to eq('CO')
       expect(event.postal_code).to eq(80010)
     end

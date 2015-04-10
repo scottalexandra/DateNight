@@ -26,8 +26,6 @@
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                   <li><%= link_to "My Profile", user_path(current_user.id) %></li>
                   <li><%= link_to " DatePlanner", new_itinerary_path, class: "fa fa-heart-o" %></li>
-                  <li><%= link_to "About", about_path %></li>
-                  <li><%= link_to "Contact Us", contact_path %></li>
                   <li><%= link_to "Log Out", logout_path %></li>
                 </ul>
               </li>
@@ -41,13 +39,7 @@
               </li>
             <% else %>
               <li>
-                <%= link_to "About", about_path %>
-              </li>
-              <li>
-                <%= link_to "Contact Us", contact_path %>
-              </li>
-              <li>
-                <%= link_to "Log In", "/auth/google_oauth2/" %>
+                <%= link_to "Log In With Google +", "/auth/google_oauth2/" %>
               </li>
             <% end %>
           </ul>
