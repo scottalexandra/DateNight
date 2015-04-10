@@ -7,7 +7,7 @@ class EventPresenter
   end
 
   def events
-    if @events
+    if find_events.class == Array
       @events = find_events.sort{|e, f| e.start_time <=> f.start_time }
     else
       @events
@@ -18,7 +18,7 @@ class EventPresenter
     if params[:search]
       Event.all(params[:category], params[:search], format_search_time)
     else
-      @events = Event.all
+      Event.all
     end
   end
 
