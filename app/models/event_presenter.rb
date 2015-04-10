@@ -1,5 +1,5 @@
 class EventPresenter
-  attr_reader :service
+  attr_reader :service, :params
 
   def initialize(params)
     @params = params
@@ -15,16 +15,16 @@ class EventPresenter
   end
 
   def find_events
-    if @params[:search]
-      Event.all(@params[:category], @params[:search], format_search_time)
+    if params[:search]
+      Event.all(params[:category], params[:search], format_search_time)
     else
       @events = Event.all
     end
   end
 
   def format_search_time
-    Event.search_time(@params[:date][:month],
-                      @params[:date][:day],
-                      @params[:date][:year])
+    Event.search_time(params[:date][:month],
+                      params[:date][:day],
+                      params[:date][:year])
   end
 end
