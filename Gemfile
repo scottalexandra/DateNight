@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -24,11 +22,11 @@ gem 'underscore-rails'
 gem 'eventfulapi', require: 'eventful/api'
 gem 'faraday', '<= 0.9.0'
 gem 'sucker_punch'
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'hashie'
+
+gem 'webmock', group: :test
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'vcr'
   gem 'shoulda-matchers', require: false
   gem 'byebug'
@@ -41,9 +39,7 @@ group :development, :test do
   gem 'pry'
   gem 'database_cleaner'
   gem 'poltergeist'
-  # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-commands-rspec'
 end

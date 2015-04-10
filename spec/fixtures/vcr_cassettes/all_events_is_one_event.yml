@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.eventful.com/yaml/events/search
+    body:
+      encoding: UTF-8
+      string: "--1E666D29B5E749F6A145BE8A576049E6\r\nContent-Disposition: form-data;
+        name=\"keywords\";\r\n\r\nArt\r\n--1E666D29B5E749F6A145BE8A576049E6\r\nContent-Disposition:
+        form-data; name=\"location\";\r\n\r\nDenver\r\n--1E666D29B5E749F6A145BE8A576049E6\r\nContent-Disposition:
+        form-data; name=\"t\";\r\n\r\nToday\r\n--1E666D29B5E749F6A145BE8A576049E6\r\nContent-Disposition:
+        form-data; name=\"page_size\";\r\n\r\n1\r\n--1E666D29B5E749F6A145BE8A576049E6\r\nContent-Disposition:
+        form-data; name=\"app_key\";\r\n\r\nDdBNfvmp5tfQ7zGr\r\n--1E666D29B5E749F6A145BE8A576049E6--"
+    headers:
+      Content-Type:
+      - multipart/form-data; boundary=1E666D29B5E749F6A145BE8A576049E6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/x-yaml; charset=utf-8
+      Content-Length:
+      - '2701'
+      Date:
+      - Thu, 09 Apr 2015 23:03:16 GMT
+      Server:
+      - lighttpd/1.4.35
+    body:
+      encoding: UTF-8
+      string: "--- \nevents: \n  event: \n    all_day: 2\n    calendar_count: ~\n
+        \   calendars: ~\n    city_name: Denver\n    comment_count: ~\n    country_abbr:
+        USA\n    country_abbr2: US\n    country_name: United States\n    created:
+        2014-09-28 04:31:59\n    description: \" <p>Kirkland Museum unveils a new
+        Colorado Art Survey as it continues to showcase the nationally important art
+        history of Colorado. For this current exhibition, the two main level exhibition
+        rooms have been re-displayed with works from the 1870s to 2000s in a timeline
+        from realism to pure abstraction. This exhibition draws from the museum&#39;s
+        unparalleled and still growing collection of 5,000 works of art by over 500
+        Colorado artists; a number of which are new acquisitions. Colorado artists
+        have distinguished themselves in many media including painting, sculpture
+        (both metal and ceramic), prints, functional ceramics, textile, enamel and
+        furniture-all of which are on view.</p>\"\n    geocode_type: EVDB Geocoder\n
+        \   going: ~\n    going_count: ~\n    groups: ~\n    id: E0-001-075620117-2\n
+        \   image: \n      caption: ~\n      height: 48\n      medium: \n        height:
+        128\n        url: http://s1.evcdn.com/images/medium/I0-001/017/021/724-7.jpeg_/colorado-art-survey-ix-24.jpeg\n
+        \       width: 128\n      small: \n        height: 48\n        url: http://s1.evcdn.com/images/small/I0-001/017/021/724-7.jpeg_/colorado-art-survey-ix-24.jpeg\n
+        \       width: 48\n      thumb: \n        height: 48\n        url: http://s1.evcdn.com/images/thumb/I0-001/017/021/724-7.jpeg_/colorado-art-survey-ix-24.jpeg\n
+        \       width: 48\n      url: http://s1.evcdn.com/images/small/I0-001/017/021/724-7.jpeg_/colorado-art-survey-ix-24.jpeg\n
+        \     width: 48\n    latitude: 39.7369934\n    link_count: ~\n    longitude:
+        -104.9801044\n    modified: 2014-09-28 04:31:59\n    olson_path: America/Denver\n
+        \   owner: evdb\n    performers: ~\n    postal_code: 80203\n    privacy: 1\n
+        \   recur_string: ~\n    region_abbr: CO\n    region_name: Colorado\n    start_time:
+        2014-12-26 00:00:00\n    stop_time: 2015-04-30 00:00:00\n    title: Colorado
+        Art Survey IX\n    tz_city: ~\n    tz_country: ~\n    tz_id: ~\n    tz_olson_path:
+        ~\n    url: http://denver.eventful.com/events/colorado-art-survey-ix-/E0-001-075620117-2?utm_source=apis&utm_medium=apim&utm_campaign=apic\n
+        \   venue_address: 1311 Pearl St\n    venue_display: 1\n    venue_id: V0-001-000189162-0\n
+        \   venue_name: Kirkland Museum of Fine & Decorative Art\n    venue_url: http://denver.eventful.com/venues/kirkland-museum-of-fine-decorative-art-/V0-001-000189162-0?utm_source=apis&utm_medium=apim&utm_campaign=apic\n
+        \   watching_count: ~\nfirst_item: ~\nlast_item: ~\npage_count: 167\npage_items:
+        ~\npage_number: 1\npage_size: 1\nsearch_time: 0.024\ntotal_items: 167\n"
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 23:03:15 GMT
+recorded_with: VCR 2.9.3
