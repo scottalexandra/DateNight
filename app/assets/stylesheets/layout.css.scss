@@ -122,28 +122,30 @@ body {
 
 .welcome-container {
   background: url('couple-sitting.jpg') no-repeat;
-  background-size: 100%;
-  height: 1000px;
-  // margin-top: 50px;
-  // padding-left: 15px;
+  background-size: cover;
+  height: 100vh;
 }
 
 .welcome-container h1 {
+  color: white;
   font-family: 'La Belle Aurore';
   font-size: 120px;
-  color: white;
-  float: left;
-  padding-left: 30px;
-  padding-top: 100px;
-  padding-bottom: 20px;
+  left: 100px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 130px;
 }
 
 .welcome-container .explore-the-possibilities h3 {
-  font-family: "Helvetica Neue";
-  margin-left: 150px;
-  padding-left: 10px;
-  font-size: 30px;
   color: orange;
+  font-family: "Helvetica Neue";
+  font-size: 30px;
+  left: 85px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 100px;
 }
 
 .welcome-container .btn-link {
@@ -168,8 +170,8 @@ body {
 //events index page
 
   .site-wrapper {
-    background-size: 100%;
     background-color: azure;
+    height: 100vh
   }
 
   .site-wrapper {
@@ -214,9 +216,10 @@ body {
 }
 
 #navbar {
+  color: purple;
   float: right;
   font-family: "Helvetica Neue";
-  color: purple;
+  padding-top: 5px;
 }
 
 #navbar li {
